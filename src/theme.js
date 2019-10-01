@@ -8,8 +8,9 @@ const Slides = ({ children }) => {
     position: 'absolute',
     right: 0,
     top: 0,
-    textAlign: 'right',
+    textAlign: 'right'
   }
+
   return (
     <nav
       css={css}
@@ -35,5 +36,5 @@ const Provider = props => {
 }
 
 export default {
-  Provider,
+  Provider
 }
