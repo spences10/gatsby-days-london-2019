@@ -1,14 +1,14 @@
 import { useDeck } from 'gatsby-theme-mdx-deck'
 import React from 'react'
 
-const Slides = ({ children }) => {
+const SlidesCount = ({ children }) => {
   const css = {
+    fontFamily: 'Poppins',
     fontSize: '1.15rem',
     padding: '0.5em',
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    textAlign: 'right',
+    position: 'sticky',
+    bottom: 0,
+    textAlign: 'center',
   }
 
   return (
@@ -21,16 +21,16 @@ const Slides = ({ children }) => {
   )
 }
 
-const Provider = props => {
+const Provider = ({ children }) => {
   const deck = useDeck()
   const { index, length } = deck
 
   return (
     <>
-      {props.children}
-      <Slides>
+      {children}
+      <SlidesCount>
         {index + 1}/{length}
-      </Slides>
+      </SlidesCount>
     </>
   )
 }
@@ -81,13 +81,14 @@ export default {
       fontSize: '3rem',
       margin: '1rem 0',
       textAlign: 'center',
+      color: '#fff',
     },
     h1: {
-      fontSize: '5rem',
+      fontSize: '7rem',
       marginBottom: '0.25rem',
     },
     h2: {
-      fontSize: '4rem',
+      fontSize: '5rem',
       margin: '0.5rem 0',
     },
     figure: {
