@@ -3,7 +3,7 @@ const siteMetadata = {
   description: `Gatsby Days - London 2019, a day of all things Gatsby.`,
   author: `Scott Spence`,
   author: `@spences10`,
-  imageUrl: `favicon.png`,
+  // imageUrl: `favicon.png`,
 }
 
 module.exports = {
