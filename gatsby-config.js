@@ -17,7 +17,7 @@ module.exports = {
         // disable gatsby-mdx plugin – use this when your site already uses gatsby-mdx
         mdx: true,
         // source directory for decks
-        contentPath: `src/slides`,
+        contentPath: `${__dirname}/src/deck`,
         basePath: '/',
       },
     },
