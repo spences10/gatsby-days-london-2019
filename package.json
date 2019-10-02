@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop -p 8924 -o",
-    "build": "gatsby build -p 9756"
+    "build": "gatsby build"
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
