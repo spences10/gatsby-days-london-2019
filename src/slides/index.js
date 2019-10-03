@@ -1,4 +1,5 @@
 import Agenda from './agenda.mdx'
+import GarbagePailComponents from './garbage-pail-components.mdx'
 import IncrementalBuilds from './incremental-builds.mdx'
 import Intro from './intro.mdx'
 import Keynote from './keynote.mdx'
@@ -14,4 +15,5 @@ export {
   Resources,
   IncrementalBuilds,
   Keynote,
+  GarbagePailComponents,
 }
