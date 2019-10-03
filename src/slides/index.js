@@ -1,3 +1,6 @@
+import Agenda from './agenda.mdx'
 import Intro from './intro.mdx'
 import Poll from './poll.mdx'
-export { Intro, Poll }
+import Preamble from './preamble.mdx'
+
+export { Intro, Poll, Agenda, Preamble }
