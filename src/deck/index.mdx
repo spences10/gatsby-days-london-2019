@@ -1,0 +1,66 @@
+import { Clock, Appear } from 'gatsby-theme-mdx-deck'
+import {
+  Intro,
+  Poll,
+  Agenda,
+  Preamble,
+  Resources,
+  IncrementalBuilds,
+  Keynote,
+} from '../slides'
+import {
+  FullPageWrapper,
+  AlignLeft,
+  VideoPlayer,
+} from '../components'
+
+export const themes = [baseTheme]
+import baseTheme from '../theme'
+
+<Intro />
+
+---
+
+<Preamble />
+
+---
+
+<Poll />
+
+---
+
+<Agenda />
+
+---
+
+<Keynote />
+
+---
+
+<img
+  src="./what-is-gatsby.jpg"
+  alt="What is Gatsby - MAppletons illustration"
+  width="70%"
+/>
+
+---
+
+<IncrementalBuilds />
+{/* <VideoPlayer /> */}
+
+---
+
+<FullPageWrapper>
+  <h1>content here</h1>
+</FullPageWrapper>
+
+---
+
+<img
+  src="./gatsby-days-hero.jpg"
+  alt="Gatsby Days Hero - MAppletons illustration"
+/>
+
+---
+
+<Resources />

@@ -1,14 +1,15 @@
+import { colors } from 'gatsby-design-tokens'
 import { useDeck } from 'gatsby-theme-mdx-deck'
 import React from 'react'
 
-const Slides = ({ children }) => {
+const SlidesCount = ({ children }) => {
   const css = {
+    fontFamily: 'Poppins',
     fontSize: '1.15rem',
     padding: '0.5em',
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    textAlign: 'right',
+    position: 'sticky',
+    bottom: 0,
+    textAlign: 'center',
   }
 
   return (
@@ -21,16 +22,16 @@ const Slides = ({ children }) => {
   )
 }
 
-const Provider = props => {
+const Provider = ({ children }) => {
   const deck = useDeck()
   const { index, length } = deck
 
   return (
     <>
-      {props.children}
-      <Slides>
+      {children}
+      <SlidesCount>
         {index + 1}/{length}
-      </Slides>
+      </SlidesCount>
     </>
   )
 }
@@ -47,9 +48,11 @@ const fonts = () => {
 }
 
 export default {
-  googleFont: `https://fonts.googleapis.com/css?family=${fonts()}`,
+  initialColorMode: 'normal',
+  useCustomProperties: true,
   fonts: {
     body: 'Poppins, sans-serif',
+    monospace: '"Victor Mono", monospace',
   },
   text: {
     heading: {
@@ -59,54 +62,52 @@ export default {
       textAlign: 'center',
     },
   },
+  googleFont: `https://fonts.googleapis.com/css?family=${fonts()}`,
   colors: {
-    text: '#000',
-    background: 'rebeccapurple',
-    link: '#000',
-    heading: '#000',
-    quote: '#000',
-    pre: '#333',
-    preBackground: 'rgb(245, 242, 240)',
-    code: '#333',
-    codeBackground: 'transparent',
-    figcaptionBackground: 'rebeccapurple',
-    figcaption: '#fff',
+    text: colors.white,
+    background: colors.purple[80],
+    primary: colors.gatsby,
+    gold: colors.yellow[50],
+    invertedText: colors.text.primary,
+    modes: {
+      invert: {
+        text: colors.text.primary,
+        background: colors.white,
+        primary: colors.gatsby,
+      },
+    },
   },
   styles: {
-    body: {},
-    Slide: {
-      textAlign: 'center',
+    Slide: {},
+    b: {
+      color: 'gold',
     },
     p: {
       fontSize: '3rem',
       margin: '1rem 0',
       textAlign: 'center',
+      color: '#fff',
+    },
+    strong: {
+      color: 'primary',
     },
     h1: {
-      fontSize: '5rem',
+      fontSize: '7rem',
       marginBottom: '0.25rem',
+      fontWeight: 700,
+      // margin: 0,
     },
     h2: {
-      fontSize: '4rem',
+      fontSize: '5rem',
+      fontWeight: 700,
+      color: colors.yellow[50],
       margin: '0.5rem 0',
     },
-    figure: {
-      textAlign: 'left',
-    },
-    code: {
-      fontSize: 'inherit',
-    },
-    figcaption: {
-      fontSize: '1.2rem',
-    },
-    li: {
-      marginBottom: '0.5rem',
-      textAlign: 'left',
-    },
-    img: {
-      display: 'inline-block',
-      objectFit: 'contain',
-      maxHeight: '100vh',
+    h3: {
+      fontSize: '3.5rem',
+      fontWeight: 700,
+      color: colors.purple[40],
+      mt: 10,
     },
   },
   Provider,
