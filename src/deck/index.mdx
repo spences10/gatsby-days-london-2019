@@ -1,9 +1,20 @@
 import { Clock, Appear } from 'gatsby-theme-mdx-deck'
-import Slide from '../templates/slide'
-import baseTheme from '../theme'
+import {
+  Intro,
+  Poll,
+  Agenda,
+  Preamble,
+  Resources,
+  IncrementalBuilds,
+} from '../slides'
+import {
+  FullPageWrapper,
+  AlignLeft,
+  VideoPlayer,
+} from '../components'
+
 export const themes = [baseTheme]
-import { Intro, Poll, Agenda, Preamble } from '../slides'
-import { FullPageWrapper, AlignLeft } from '../components'
+import baseTheme from '../theme'
 
 <Intro />
 
@@ -21,16 +32,17 @@ import { FullPageWrapper, AlignLeft } from '../components'
 
 ---
 
+<IncrementalBuilds />
+<VideoPlayer />
+
+---
+
 <FullPageWrapper>
-  <AlignLeft>content here</AlignLeft>
+  <AlignLeft>
+    <h1>content here</h1>
+  </AlignLeft>
 </FullPageWrapper>
 
 ---
 
-Kyles Slides:
-
-https://docs.google.com/presentation/d/1z9oi--umA_bOaoIl-8Rd-XaRf8md0zNzWUc6irXpl9w/edit#slide=id.gcb9a0b074_1_0
-
-Kyles Keynote:
-
-https://www.youtube.com/watch?v=kuyLCwAMCZo
+<Resources />
