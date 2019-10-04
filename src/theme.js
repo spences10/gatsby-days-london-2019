@@ -57,7 +57,7 @@ export default {
   text: {
     heading: {
       color: '#fff',
-      fontFamily: 'Montserrat Alternates',
+      fontFamily: 'Vollkorn',
       margin: '0 auto 0.5rem',
       textAlign: 'center',
     },
@@ -102,12 +102,13 @@ export default {
       fontWeight: 700,
       color: colors.yellow[50],
       margin: '0.5rem 0',
+      fontFamily: 'Montserrat Alternates',
     },
     h3: {
       fontSize: '3.5rem',
       fontWeight: 700,
       color: colors.purple[40],
-      mt: 10,
+      fontFamily: 'Cherry Swash',
     },
   },
   Provider,
