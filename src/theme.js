@@ -111,6 +111,9 @@ export default {
       color: colors.purple[40],
       fontFamily: 'Cherry Swash',
     },
+    a: {
+      color: '#fff',
+    },
   },
   Provider,
 }
