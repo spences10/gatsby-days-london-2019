@@ -1,6 +1,6 @@
 {
   "name": "gatsby-days-london-2019",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "main": "index.js",
   "private": true,
   "repository": "git@github.com:spences10/gatsby-days-london-2019.git",
@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.18.21",
+    "gatsby": "2.18.22",
     "gatsby-design-tokens": "1.0.10",
     "gatsby-plugin-manifest": "2.2.37",
-    "gatsby-plugin-offline": "3.0.31",
+    "gatsby-plugin-offline": "3.0.32",
     "gatsby-plugin-react-helmet": "3.1.21",
     "gatsby-plugin-styled-components": "3.1.17",
     "gatsby-theme-mdx-deck": "3.0.13",
